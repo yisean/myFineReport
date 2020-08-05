@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+        version="2.4">
+
+    <display-name>Template WebApp</display-name>
+
+    <mime-mapping>
+        <extension>msi</extension>
+        <mime-type>application/x-msi</mime-type>
+    </mime-mapping>
+
+    <servlet>
+        <servlet-name>ReportServer</servlet-name>
+        <servlet-class>com.fr.web.ReportServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TestSave</servlet-name>
+        <servlet-class>com.fr.web.TestSave</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReportServer</servlet-name>
+        <url-pattern>/ReportServer</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestSave</servlet-name>
+        <url-pattern>/TestSave</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>FrFilter</filter-name>
+        <filter-class>com.fr.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FrFilter</filter-name>
+        <url-pattern>/ReportServer</url-pattern>
+    </filter-mapping>
+</web-app>
+
+

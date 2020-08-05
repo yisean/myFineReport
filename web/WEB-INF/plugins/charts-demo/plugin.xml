@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.plugins.democharts</id>
+    <name><![CDATA[DemoCharts图表]]></name>
+    <active>yes</active>
+    <version>1.0</version>
+    <env-version>8.0</env-version>
+    <jartime>2017-01-01</jartime>
+    <vendor email="">democharts</vendor>
+    <description></description>
+    <change-notes><![CDATA[<p>Demo</p>]]></change-notes>
+    <extra-report/>
+    <extra-designer/>
+    <extra-platform/>
+    <extra-core>
+        <JavaScriptFileHandler class="com.fr.plugins.democharts.common.web.EChartsFileLoader"/>
+    </extra-core>
+    <extra-chart>
+        <IndependentChartProvider class="com.fr.plugins.democharts.custompie.DemoChartsPieWithCustomPane"
+                                  plotID="ChartsPieWithCustomDataPane"/>
+        <IndependentChartProvider class="com.fr.plugins.democharts.commonpie.DemoChartsPie"
+                                  plotID="ChartsPieWithCommenDataPane"/>
+    </extra-chart>
+    <extra-chart-designer>
+        <IndependentChartUIProvider class="com.fr.plugins.democharts.custompie.DemoChartsPieUIWithCustomPane"
+                                    plotID="ChartsPieWithCustomDataPane"/>
+        <IndependentChartUIProvider class="com.fr.plugins.democharts.commonpie.DemoChartsPieUI"
+                                    plotID="ChartsPieWithCommenDataPane"/>
+    </extra-chart-designer>
+</plugin>

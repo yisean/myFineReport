@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><plugin>
+    <id>com.fr.solution.theme.green</id>
+    <name><![CDATA[横向目录绿色主题]]></name>
+    <active>yes</active>
+    <version>2.0</version>
+    <env-version>8.0</env-version>
+    <jartime>2016-05-01</jartime>
+    <vendor>solution.richie</vendor>
+    <description><![CDATA[目录在横向方向的绿色系平台主题]]></description>
+    <change-notes><![CDATA[无]]></change-notes>
+    <extra-core>
+        <LocaleFinder class="com.fr.solution.theme.green.ThemeLocaleFinder"/>
+    </extra-core>
+    <extra-designer>
+    </extra-designer>
+    <extra-platform>
+        <ThemeVariousProvider class="com.fr.solution.theme.green.ThemeGreen"/>
+    </extra-platform>
+</plugin>
